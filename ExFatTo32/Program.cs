@@ -390,7 +390,8 @@ namespace ExFatTo32
 
                     // Extract video name from first part file
                     string baseName = Path.GetFileNameWithoutExtension(partFiles.First())
-                        .Split('_').First(p => p.Contains("_") || !p.Contains("_")) + "_video";
+                        //.Split('_').First(p => p.Contains("_") || !p.Contains("_")) + "_video";
+                        .Split('_').First(p => p.Contains("_") || !p.Contains("_"));
                     string originalName = baseName.Split('_')[0];
 
                     // Create playlist in this folder
